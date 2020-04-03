@@ -1,0 +1,5 @@
+FROM docker.elastic.co/logstash/logstash:7.6.1
+USER 0
+RUN yum update -y \
+    && yum install -y vim \
+    && yum clean all
