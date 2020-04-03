@@ -1,15 +1,9 @@
-## start docker-compose
-# docker-compose logstash không có build
+# start docker-compose
 ```
-docker-compose -f elk-compose.yml up --force-recreate -d
-```
-
-# docker-compose logstash có build
-```
-docker-compose -f elk-compose.yml up --force-recreate -d rebuild
+docker-compose -f elk-compose.yml up --force-recreate -d --build
 ```
 
-## stop docker-compose
+# stop docker-compose
 ```
 docker-compose down
 ```
