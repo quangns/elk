@@ -30,12 +30,15 @@ services:
     build:
       context: .
       dockerfile: logstash_dockerfile
+    hostname: logstash
     volumes:
       - ./logstash/config/:/usr/share/logstash/config/ 
     container_name: logstash-compose
+    environment:
+      LS_OPTS: "--config.reload.automatic"
     ports:
-      - "5000:5000/tcp"
-      - "5000:5000/udp"
+      - "5044:5044/tcp"
+      - "5044:5044/udp"
       - "9600:9600"
     volumes:
       - ./logstash/config/:/usr/share/logstash/config/ 
