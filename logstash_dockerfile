@@ -3,3 +3,5 @@ USER 0
 RUN yum update -y \
     && yum install -y vim \
     && yum clean all
+COPY ./logstash/config/myconfig.cfg /usr/share/logstash/pipeline/
+USER 1000
