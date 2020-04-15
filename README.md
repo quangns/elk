@@ -1,5 +1,6 @@
+# Docker-compose
 *start docker-compose*
-# --build dùng sau khi chỉnh sửa lại dockerfile và muốn build lại (file: logstash_dockerfile)
+*--build dùng sau khi chỉnh sửa lại dockerfile và muốn build lại (file: logstash_dockerfile)*
 ```
 $ docker-compose -f elk-compose.yml up --force-recreate -d --build
 ```
